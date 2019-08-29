@@ -16,23 +16,17 @@ class MypkgConan(ConanFile):
     exports_sources = "src/*"
     requires = "gtest/1.8.1@bincrafters/stable"
 
-    def build(self):
+
+    def cmake_configure(self):
         cmake = CMake(self)
         cmake.configure(source_folder="src")
+        return cmake
+
+    def build(self):
+        cmake = self.cmake_configure()
         cmake.build()
 
-        # Explicit way:
-        # self.run('cmake %s/hello %s'
-        #          % (self.source_folder, cmake.command_line))
-        # self.run("cmake --build . %s" % cmake.build_config)
-
     def package(self):
-        self.copy("*.h", dst="include", src="src")
-        self.copy("*.lib", dst="lib", keep_path=False)
-        self.copy("*.dll", dst="bin", keep_path=False)
-        self.copy("*.dylib*", dst="lib", keep_path=False)
-        self.copy("*.so", dst="lib", keep_path=False)
-        self.copy("*.a", dst="lib", keep_path=False)
+        cmake = self.cmake_configure()
+        cmake.install()
 
-    def package_info(self):
-        self.cpp_info.libs = ["srcpcg"]
