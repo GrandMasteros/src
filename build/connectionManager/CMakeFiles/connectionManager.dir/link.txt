@@ -1,0 +1,2 @@
+/usr/bin/ar qc ../lib/libconnectionManager.a  CMakeFiles/connectionManager.dir/ConnectionManager.cpp.o CMakeFiles/connectionManager.dir/MsgMerger.cpp.o CMakeFiles/connectionManager.dir/MsgHelper.cpp.o
+/usr/bin/ranlib ../lib/libconnectionManager.a

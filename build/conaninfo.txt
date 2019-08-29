@@ -1,0 +1,37 @@
+[settings]
+    arch=x86_64
+    build_type=Release
+    compiler=gcc
+    compiler.libcxx=libstdc++
+    compiler.version=7
+    os=Linux
+
+[requires]
+    gtest/1.Y.Z
+
+[options]
+    shared=False
+
+[full_settings]
+    arch=x86_64
+    build_type=Release
+    compiler=gcc
+    compiler.libcxx=libstdc++
+    compiler.version=7
+    os=Linux
+
+[full_requires]
+    gtest/1.8.1@bincrafters/stable:4a8c5b4cd3b4d45b83fff85d53160ea02ae5fa2d
+
+[full_options]
+    shared=False
+    gtest:build_gmock=True
+    gtest:fPIC=True
+    gtest:no_main=False
+    gtest:shared=False
+
+[recipe_hash]
+
+
+[env]
+

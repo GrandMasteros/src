@@ -1,0 +1,2 @@
+/usr/bin/ar qc ../lib/libi2c.a  CMakeFiles/i2c.dir/I2cInterface.cpp.o
+/usr/bin/ranlib ../lib/libi2c.a

@@ -1,0 +1,16 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/cscomarch/embeddedProject/src/src/hello.cpp
+iostream
+-
+hello.h
+/home/cscomarch/embeddedProject/src/src/hello.h
+
+/home/cscomarch/embeddedProject/src/src/hello.h
+
